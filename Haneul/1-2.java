@@ -1,6 +1,6 @@
 package Haneul;
 
-class Solution {
+class Solution_2 {
     public double solution(int[] arr) {
         double answer = 0;
         double result = 0;
