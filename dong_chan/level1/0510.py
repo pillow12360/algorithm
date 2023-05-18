@@ -1,18 +1,22 @@
-def solution(n):
+# def solution(n):
  
-    answer = []
+#     answer = []
 
-    n = str(n)
-    m=[]
+#     n = str(n)
+#     m=[]
 
-    for i in range(0,len(n)):
-       m.append(n[i]) 
+#     for i in range(0,len(n)):
+#        m.append(n[i]) 
 
-    print(m)
+#     print(m)
 
-    for i in range(0,len(m)):
-      answer.append(int(m.pop(-1)))
+#     for i in range(0,len(m)):
+#       answer.append(int(m.pop(-1)))
 
-    return answer
+#     return answer
 
-print(solution(12345))
+# print(solution(12345))
+
+arr1 = [[1],[2,3]]
+
+print(len(arr1[0]))
