@@ -56,6 +56,3 @@ if returnIndex >= 26:
 print(lower[returnIndex])
 
 # 2방법 아스키 코드 변환 방법
-
-
-    

@@ -14,3 +14,4 @@ def solution(arr):
 arr = [10]
 
 print(solution(arr))
+
