@@ -10,27 +10,31 @@ def solution(strings, n):
     dic1 = {}
 
     for i, j in enumerate(alpha):
-        dic1[j]=i
+        dic1[i]=j
     # 딕셔너리로 인덱스와 값을 한번에 저장
-    # 오류 발생 키값이 같으면 값이 삭제됨
+    # 오류 발생 키값이 같으면 값이 삭제됨 values 값을 알파벳 원소로
 
-
-    # dic1 = sorted(dic1)
-    # key값을 기준으로 오름차순 정렬되면서 리스트로 변환됨 사용x
 
     dic1 = dict(sorted(dic1.items()))
 
-
-
-    # 키를 오름차순 정렬 
-    #리스트 변환 문제 해결 but 집합 자료형으로 변환
+    # values 를 오름차순 정렬 
+    #리스트 변환 문제 해결 but 집합 자료형으로 변환 => dict() 함수로 해결
 
     print(dic1)
 
-    for i in dic1.values():
-        answer.append(strings[i])
+    for i in dic1.keys():
         
-
+        if dic1[i] == dic1[i+1]:
+            temps = []
+            temps.append(strings[i])
+            temps.append(strings[i+1])
+            temps = sorted(temps)
+            for j in temps:
+              answer.append(j)
+            i+=1
+        else:
+          answer.append(strings[i])
+    
 
     return answer
 
@@ -43,4 +47,3 @@ n = 2
 
 print(solution(strings,n))
 
-# 같은 값일 경우 딕셔너리 자료구조 사용불가 키값이 고유해야 하기 때문에 이렇게 풀 수 없음
