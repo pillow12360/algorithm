@@ -46,3 +46,5 @@ strings = ["abce", "abcd", "cdx"]
 n = 2
 
 print(solution(strings,n))
+
+# 삽입정렬
