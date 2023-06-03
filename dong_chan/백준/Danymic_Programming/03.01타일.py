@@ -1,5 +1,5 @@
 import math
-
+# 6월3일 
 # 만들 자리 수
 
 # 동적 계획법 : 일부의 작은 결과값을 반복하여 결론 도출
@@ -79,6 +79,8 @@ for i in range(0,cnt+1): #1부터 사용할 z의
     answer+=permu
 
 print(answer)
+
+#시간 초과 에러
 
 
 
