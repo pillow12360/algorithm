@@ -1,30 +1,23 @@
 #24416 피보나치 수 1 0531
 
-n = int(input())
 
-class fiboClass():
-    def init(self):
-        self.cnt = 0
-
-    def fib(self,n):
-        cnt = cnt + 1
-        if n == 1 or n ==2:
-            return 1
-        else:
-            return self.fib(n-1)+self.fib(n-2)
-
-    def fibonacci(self,n):
-        self.cnt = self.cnt + 1
-        f = [1, 1]  
+def fib(n):
+    if n==1 or n==2:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
         
-        for i in range(2, n):
-            f.append(f[i-1] + f[i-2]) 
-        
-        return f[n-1]
+def fibonacci(n):
+    dp=[0]*(n+1)
+    dp[1],dp[2]=1,1
+    cnt2=0
+    for i in range(3,n+1):
+        cnt2+=1
+        dp[i]=dp[i-1]+dp[i-2]
+    return cnt2
 
-fibo = fiboClass()
+n=int(input())
+print(fib(n),fibonacci(n)) 
+    
 
-fibo.fib(n)
-fibo.fibonacci(n)
 
-print(fibo.cnt)
