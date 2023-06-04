@@ -60,6 +60,7 @@ for i in range(0,cnt+1): #1부터 사용할 z의
 print(answer)
 
 '''
+# 직접
 N = int(input())
 
 cnt = N//2
