@@ -6,9 +6,28 @@ N, M, K = map(int,(input().split()))
 
 N = list(map(int,input().split()))
 
+# N = 5
+# M = 8
+# K = 3
+
+# N = [2, 4, 5, 4, 6]
 
 N = sorted(N,reverse=True)
 
 print(N)
 
+a = N[0]
+b = N[1]
+answer = 0
+while M > 0:
+    for i in range(0,K):
+        if M == 0:
+            break
+        answer += a
+        M -= 1
+    if M == 0:
+        break
+    answer += b
+    M -= 1
 
+print(answer)
