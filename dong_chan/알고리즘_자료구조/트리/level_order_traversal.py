@@ -35,6 +35,8 @@
 
 
 # 내가 한번 코드 구현을 해본다.
+# level 순회 코드에서 변형만 해주면 된다.
+
 
 from collections import deque
 
@@ -51,23 +53,23 @@ class BinaryTree():
         self.root = None
 
 
-def MaxDepth(root):
-    max_depth = 0
-    if root is None:
-        return max_depth
+# def MaxDepth(root):
+#     max_depth = 0
+#     if root is None:
+#         return max_depth
 
-    q = deque()
-    q.append((root, 1))
+#     q = deque()
+#     q.append((root, 1))
 
-    while q:
-        cur_node, cur_depth = q.popleft()
-        max_depth = max(cur_depth, max_depth)
-        if cur_node.left:
-            q.append((cur_node.left, cur_depth+1))
-        if cur_node.right:
-            q.append((cur_node.right, cur_depth+1))
+#     while q:
+#         cur_node, cur_depth = q.popleft()
+#         max_depth = max(cur_depth, max_depth)
+#         if cur_node.left:
+#             q.append((cur_node.left, cur_depth+1))
+#         if cur_node.right:
+#             q.append((cur_node.right, cur_depth+1))
 
-    return max_depth
+#     return max_depth
 
 
 input = [3, 9, 20, None, None, 15, 7]  # 리스트를 트리 형태로 저장 해야함
@@ -78,4 +80,26 @@ root.right = Node(value=20)
 root.right.left = Node(value=15)
 root.right.right = Node(value=7)
 
-print(MaxDepth(root))
+
+def maxDepth(root):
+    maxDepth = 0
+
+    if root is None:
+        return maxDepth
+
+    q = deque()
+
+    q.append((root, 1))
+
+    while q:
+        cur_node, cur_depth = q.popleft()
+        maxDepth = max(maxDepth, cur_depth)
+        if cur_node.left:
+            q.append((cur_node.left, cur_depth+1))
+        if cur_node.right:
+            q.append((cur_node.right, cur_depth+1))
+
+    return maxDepth
+
+
+print(maxDepth(root))

@@ -12,3 +12,5 @@ def factorial(N):
 
 
 print(factorial(N))
+
+# 정답

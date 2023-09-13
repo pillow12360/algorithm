@@ -55,7 +55,7 @@ N = int(input())
 
 # tree, parent 초기화
 tree = [[] for _ in range(N + 1)]  # 트리를 2 중 리스트로 초기화
-parent = [None for _ in range(N + 1)]  # 부모를 저장할 빈 리스트를 초기화
+parent = [None for _ in range(N + 1)]  # 부모를 저장할 빈 리스트를 초기화 각 요소는 None 값
 
 # DFS 정의
 
