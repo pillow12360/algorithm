@@ -103,3 +103,24 @@ def maxDepth(root):
 
 
 print(maxDepth(root))
+
+
+# 0913 Step 2 postorder 후위순회
+
+# level order 방식은 노드를 내려가면서 +1 씩하며 최대값 얻기
+
+# 모든 노드에 방문을 하는데, 자손의 깊이를 비교하여 가장 깊은 레벨에 +1 
+
+# postorder 모든 자식 노드를 방문 후 본인 방문 (방문 = 액션)
+
+
+def postorder(root):
+    if root is None:
+        return 0
+    
+    leftDepth = postorder(root.left)
+    rightDepth = postorder(root.right)
+
+    return max(leftDepth,rightDepth) + 1 
+
+print(postorder(root))
