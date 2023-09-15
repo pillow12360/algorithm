@@ -115,12 +115,16 @@ print(maxDepth(root))
 
 
 def postorder(root):
+    maxDepth = 0
+
     if root is None:
         return 0
     
     leftDepth = postorder(root.left)
     rightDepth = postorder(root.right)
-
-    return max(leftDepth,rightDepth) + 1 
+    
+    maxDepth = max(leftDepth,rightDepth) + 1 
+    
+    return maxDepth
 
 print(postorder(root))
