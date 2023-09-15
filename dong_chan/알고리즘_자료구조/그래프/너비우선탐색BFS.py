@@ -1,7 +1,8 @@
 from collections import deque
 
+
 def bfs(graph, start_v):
-    
+
     visited = [start_v]
     queue = deque(start_v)
 
@@ -13,11 +14,26 @@ def bfs(graph, start_v):
                 queue.append(v)
     return visited
 
+
 graph = {
-    'A' : ['B','D','E'],
-    'B' : ['A','C','D'],
-    'C' : ['B'],
-    'D' : ['A','B'],
-    'E' : ['A']
- }
+    'A': ['B', 'D', 'E'],
+    'B': ['A', 'C', 'D'],
+    'C': ['B'],
+    'D': ['A', 'B'],
+    'E': ['A']
+}
 bfs(graph, 'A')
+
+
+def BFS(graph, start_v):
+    visited = [start_v]
+    queue = deque(start_v)
+
+    while queue:
+        cur_v = queue.popleft()
+        for v in graph[cur_v]:
+            if v not in visited:
+                queue.append(v)
+                visited.append(v)
+
+    return visited
