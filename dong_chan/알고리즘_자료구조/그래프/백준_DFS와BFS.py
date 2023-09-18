@@ -23,7 +23,7 @@ for _ in range(M):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
-# 값을 대입하는 형식
+# 값을 대입하는 형식 양방향 그래프라서 두개를 추가해 주었다.
 
 for i in graph:
   i.sort()
