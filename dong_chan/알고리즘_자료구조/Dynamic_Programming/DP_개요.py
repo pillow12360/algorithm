@@ -24,12 +24,12 @@
 
 # n-2 번째 n -1 번째 n 번째의 관계식을 : recurrence relation
 
-def fibo(n):
-  if n == 1 or n==2:
-    return 1
-  return fibo(n-2) + fibo(n-1)
+# def fibo(n):
+#   if n == 1 or n==2:
+#     return 1
+#   return fibo(n-2) + fibo(n-1)
 
-print(fibo(8))
+# print(fibo(8))
 
 
 '''
@@ -105,3 +105,28 @@ top - down 방식으로 구현 했을 때 실행시간이 길다면 bottom up �
 
 
 '''
+# dp 
+
+# top - down 방식
+memo = {}
+def fibonazzi(n):
+  if n == 1 or n == 2:
+    return 1
+  if n not in memo:
+    memo[n] = fibonazzi(n-2) + fibonazzi(n-1)
+  return memo[n]
+
+print(fibonazzi(7))
+
+# bottom - up 방식
+
+def fibonazzi1(n):
+  dp_table = [0]*n
+  dp_table[0] = 1
+  dp_table[1] = 1
+
+  for i in range(2,n):
+    dp_table[i] = dp_table[i-2] + dp_table[i-1]
+  return dp_table[-1]
+
+print(fibonazzi1(7))
