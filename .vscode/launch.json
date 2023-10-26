@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ehdck/Desktop/study/Programmers_for_Coding_Test/dong_chan/C++/문법_구현",
-      "program": "c:/Users/ehdck/Desktop/study/Programmers_for_Coding_Test/dong_chan/C++/문법_구현/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
