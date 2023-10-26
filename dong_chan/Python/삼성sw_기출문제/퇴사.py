@@ -37,11 +37,11 @@ for _ in range(N):
   date.append((T,P))
 
 dp = [0] * (N+1) 
-# dp[i] 의 값은 이 날짜까지의 최대로 상담을 한 이익
+# dp[i] 의 값은 이 날짜까지의 최대의 이익
 
 for i in range(N):
-  for j in range(i+date[i][0], N+1):
-    if dp[j] < dp[i] + date[i][1]:
-      dp[j] = dp[i] + date[i][1]
+  for j in range(i+date[i][0], N+1): 
+    if dp[j] < dp[i] + date[i][1]: # 이전까지의 이익 + 다음 날짜의 이익이 더 크면
+      dp[j] = dp[i] + date[i][1] # 이익의 더 큰 값으로 바꾸어 줌 
 
-print(dp[-1])
+print(dp[-1]) # 인덱스의 마지막 값 출력
