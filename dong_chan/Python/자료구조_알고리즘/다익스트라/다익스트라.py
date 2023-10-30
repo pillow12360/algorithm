@@ -22,13 +22,11 @@ def dijkstra(graph, start, final):
   heapq.heappush(pq,(0, start)) # 우선순위큐에 시작노드 추가
 
   while pq:
-    cur_cost, cur_v = heapq.heappop(pq)
-    if cur_v not in costs: # 방문한적 없다면
+    cur_cost, cur_v = heapq.heappop(pq) # 우선순위가 높은 노드 순으로 추출
+    if cur_v not in costs: # 방문한적 없다면 = costs 딕셔너리에 값이 없으면
       costs[cur_v] = cur_cost # 비용 업데이트
       for cost, next_v in graph[cur_v]: # 연결된 노드 우선순위 큐에 추가
         next_cost = cur_cost + cost
         heapq.heappush(pq, (next_cost, next_v))
         
   return costs[final]
-
-def d
