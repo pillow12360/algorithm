@@ -38,25 +38,20 @@
 500
 166699
 
-
-
-
 '''
 
 n = int(input())
 
-cnt = 0
-result = 666
+cnt = 0 # ~ 번 째로 작은 수 인지 판별 하기 위한 cnt변수
+result = 666 # 종말의 수
 
-while True:
-  if '666' in str(result):
-    cnt += 1
+while True: 
+  if '666' in str(result): # 파이썬의 in 연산으로 종말의 수 인지 판별
+    cnt += 1 # 처음 부터 종말의 수의 번째를 구하다가
   
-  if cnt == n:
-    break
+  if cnt == n: # 구하고자 했던 n번째로 작은 종말의 수 이면
+    break # 브레이크
 
-  result += 1
+  result += 1 # 하나하나 계속 수를 증가시키며 완전탐색
 
 print(result)
-
-
