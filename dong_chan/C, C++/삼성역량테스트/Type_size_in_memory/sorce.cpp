@@ -1,4 +1,7 @@
 #include <iostream>
+void printHello(void) {
+	std::cout << "Hello!" << std::endl;
+}
 
 int main()
 {
@@ -6,6 +9,8 @@ int main()
 
 	std::cout << sizeof(int8_t) << std::endl;
 	std::cout << sizeof(int64_t) << std::endl;
-	
+	printHello();
+
 	return 0;
 }
+
