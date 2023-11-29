@@ -1,3 +1,5 @@
+# 11_24 그래프 골드5 적록색약
+
 from collections import deque
 
 N = int(input())
