@@ -1,3 +1,5 @@
+# 11월 23일 그래프 (골드5) 시작점이 여러개인 bfs
+
 from collections import deque
 
 M, N = map(int, input().split())

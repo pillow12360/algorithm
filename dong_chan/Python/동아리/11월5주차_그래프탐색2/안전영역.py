@@ -70,6 +70,7 @@ if dap:
 else:
     print(0)
 
+# 이게 제출 코드입니다.
 
 '''
 from collections import deque
