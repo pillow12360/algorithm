@@ -36,10 +36,11 @@ def bfs():
 
 
 bfs()
+print(box)
 
 for i in box:
     for j in i:
-        if j == 0:
+        if j == 0: # 0 값이 있을 경우 
             print(-1)
             exit(0)
     days = max(days, max(i))
