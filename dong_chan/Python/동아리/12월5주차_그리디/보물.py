@@ -11,7 +11,6 @@ B = list(map(int, input().split()))
 # 가장 큰 수와 가장 작은 수 의 곱의 합
 
 # 0 x 가장 큰 수
-#
 
 A.sort()
 B.sort(reverse=True)
