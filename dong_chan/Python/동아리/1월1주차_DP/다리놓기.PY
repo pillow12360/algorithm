@@ -8,6 +8,7 @@ T = int(input())
 
 while T > 0:
   N, M = map(int,input().split())
+  
   T -= 1
 
   dp= [[0]*M for _ in range(N)]
@@ -15,10 +16,6 @@ while T > 0:
   for i in range(M):
     dp[0][i] = i+1
 
-  # if N == 1:
-  #   print(dp[-1][-1])
-  #   continue
-    
   for i in range(1,N):
     for j in range(1,M):
       if i == j:
