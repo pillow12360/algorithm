@@ -5,7 +5,6 @@
 # 가장 긴 바이토닉 부분 수열을 찾는 문제
 # 길이 출력
 
-
 # 1월 15일 정답 확인
 # https://seohyun0120.tistory.com/entry/%EB%B0%B1%EC%A4%80-11054-%EA%B0%80%EC%9E%A5-%EA%B8%B4-%EB%B0%94%EC%9D%B4%ED%86%A0%EB%8B%89-%EB%B6%80%EB%B6%84-%EC%88%98%EC%97%B4-%ED%92%80%EC%9D%B4
 
