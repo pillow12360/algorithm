@@ -3,41 +3,41 @@
 
 # 첫번째 제출
 
-# from collections import deque
+from collections import deque
 
-# t = int(input())
-# # 테스트 개수
+t = int(input())
+# 테스트 개수
 
-# for _ in range(t):
+for _ in range(t):
 
-#     n, m = map(int, input().split())
-#     # 중요도 1~9 이하의 정수
-#     # 중요도 중복 가능
-#     a = list(map(int, input().split()))
+    n, m = map(int, input().split())
+    # 중요도 1~9 이하의 정수
+    # 중요도 중복 가능
+    a = list(map(int, input().split()))
 
-#     for i in range(n):
-#         if i == m:
-#             temp = a[i]
-#             a[i] = (temp, 1)
-#         else:
-#             temp = a[i]
-#             a[i] = (temp, 0)
+    for i in range(n):
+        if i == m:
+            temp = a[i]
+            a[i] = (temp, 1)
+        else:
+            temp = a[i]
+            a[i] = (temp, 0)
 
-#     d = deque(a)
+    d = deque(a)
 
-#     cnt = 1
-#     dap = {}
+    cnt = 1
+    dap = {}
 
-#     while d:
-#         if d[0] == max(d, key=lambda x: x[0]):
-#             dap[cnt] = d.popleft()
+    while d:
+        if d[0] == max(d, key=lambda x: x[0]):
+            dap[cnt] = d.popleft()
 
-#             if dap[cnt][1] == 1:
-#                 print(len(dap))
-#                 break
-#             cnt += 1
-#         else:
-#             d.rotate(-1)
+            if dap[cnt][1] == 1:
+                print(len(dap))
+                break
+            cnt += 1
+        else:
+            d.rotate(-1)
 
 # 키워드
 # 덱 사용
@@ -49,7 +49,6 @@
 
 # 두번째 제출
 
-from collections import deque
 
 t = int(input())
 # 테스트 개수
