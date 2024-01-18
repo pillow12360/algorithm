@@ -4,6 +4,7 @@
 # 로봇 청소기
 
 n, m = map(int, input().split())
+# n * m
 
 # 로봇 청소기의 좌표
 
@@ -15,8 +16,7 @@ s_r, s_c, d = map(int, input().split())
 
 graph = []
 
-
-for _ in range(m):
+for _ in range(n):
     graph.append(list(map(int, input().split())))
 
 # print(graph)
@@ -77,16 +77,16 @@ def turn_d(d):  # 반시계로 90도 회전
         d = 3
     elif d == 1:
         d = 0
-    if d == 2:
+    elif d == 2:
         d = 1
-    if d == 3:
+    elif d == 3:
         d = 2
     return d
 
 
 # 현재 로봇 위치
-c_r = s_r + 1
-c_c = s_c + 1
+c_r = s_r
+c_c = s_c
 
 while True:
 
@@ -98,24 +98,26 @@ while True:
 
     for i in range(4):  # 4칸 중 빈칸 있는 지 확인
         n_r, n_c = forward(c_r, c_c, i)
-        if graph[n_r][n_c] == 0:
-            clean_check = False
+        if 0 <= n_r < n and 0 <= n_c < m:
+            if graph[n_r][n_c] == 0:
+                clean_check = False
     # 청소 되지 않는 칸 이 있는 경우
     # 90 도 회전 : 북->서, 서->남, 남->동, 동->북
 
     if clean_check == False:
         for _ in range(4):
-            turn_d(d)  # 90도 회전
+            d = turn_d(d)  # 90도 회전
             n_r, n_c = forward(c_r, c_c, d)
-            if 0 <= n_r < n-1 and 0 <= n_c < m-1:
+            if 0 <= n_r < n and 0 <= n_c < m:
                 if graph[n_r][n_c] == 0:
                     c_r, c_c = n_r, n_c  # 한칸 전진
                     continue
     else:  # 청소되지 않는 칸이 없는 경우 : 한칸 후진-> 1번 돌아가
         b_r, b_c = backward(c_r, c_c, d)
-        if graph[b_r][b_c] == 1:  # 후진 후 벽이 있다면 끝
-            break
-        else:
-            c_r, c_c = b_r, b_c  # 아니면 뒤로 후진
+        if 0 <= b_r < n and 0 <= b_c < m:
+            if graph[b_r][b_c] == 1:  # 후진 후 벽이 있다면 끝
+                break
+            else:
+                c_r, c_c = b_r, b_c  # 아니면 뒤로 후진
 
 print(clean)
