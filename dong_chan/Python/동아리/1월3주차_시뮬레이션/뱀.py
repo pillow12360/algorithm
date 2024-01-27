@@ -106,7 +106,7 @@ for i in range(len(change_snake)):
         else:
             x, y = nx, ny  # 머리 위치 업데이트
             snake.popleft()  # 덱 구조 핵심 = 꼬리를 없애준다
-            snake.append((x, y))  # 뱀의 몸 추가
+            snake.append((x, y))  # 뱀의 머리 앞으로 이동
         cnt += 1
     if breaker == True:
         break
