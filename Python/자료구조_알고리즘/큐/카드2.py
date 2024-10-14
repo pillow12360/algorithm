@@ -69,3 +69,17 @@ n = 4
 
 
 '''
+
+def last_card_remaining_math(N):
+    # Find the largest power of 2 less than or equal to N
+    power_of_two = 1
+    while power_of_two * 2 <= N:
+        power_of_two *= 2
+
+    # Calculate the last remaining card
+    remaining_card = 2 * (N - power_of_two)
+    return remaining_card
+
+# Example usage
+N = 4
+print("The last remaining card is:", last_card_remaining_math(N))
