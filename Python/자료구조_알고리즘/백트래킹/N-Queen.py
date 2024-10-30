@@ -23,7 +23,7 @@ def backtrack(row):
             # 왼쪽 아래에서 오른쪽 위로 향하는 대각선의 인덱스는 row + col
             # 오른쪽 아래에서 왼쪽 위로 향하는 대각선의 인덱스는 row - col + n - 1로 계산
             # 대각선 두개와 컬럼에 공격범위를 모두 true로 설정 후
-            backtrack(row + 1) # dfs
+            backtrack(row + 1) # dfs 깊이 우선 탐색
             # 퀸을 제거한다
             cols[col] = diag1[row + col] = diag2[row - col + n - 1] = False
 
