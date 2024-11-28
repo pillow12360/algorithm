@@ -4,24 +4,21 @@ A = list(input())
 
 word = list(input())
 
+word_len = len(word)
+
 word = deque(word)
 
 cnt = 0
 
-while word:
-    cnt += 1
-    a = word.popleft()
 
-    for i in range(len(A)):
-        if a == A[i] and word:
+a = word.popleft()
+
+for i in A:
+    if a == i:
+        cnt += 1
+        if word:
             a = word.popleft()
 
-            continue
+answer = word_len - cnt + 1
 
-
-
-print(cnt)
-    
-
-
-    
+print(answer)
