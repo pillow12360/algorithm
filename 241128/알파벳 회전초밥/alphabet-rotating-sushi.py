@@ -1,24 +1,19 @@
 from collections import deque
 
-A = list(input())
+A = input().strip()
+word = deque(input().strip())
 
-word = list(input())
+cnt = 1
+curr_pos = 0  
 
-word_len = len(word)
+while word:
+    if curr_pos >= len(A):  
+        curr_pos = 0 
+        cnt += 1 
+        
+    if A[curr_pos] == word[0]: 
+        word.popleft()
+    
+    curr_pos += 1
 
-word = deque(word)
-
-cnt = 0
-
-
-a = word.popleft()
-
-for i in A:
-    if a == i:
-        cnt += 1
-        if word:
-            a = word.popleft()
-
-answer = word_len - cnt + 1
-
-print(answer)
+print(cnt)
