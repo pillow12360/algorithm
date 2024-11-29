@@ -2,7 +2,7 @@ from collections import deque
 
 n = int(input())
 
-dy = [0,1,-1,1]
+dy = [0,1,-1,0]
 dx = [-1,0,0,1]
 # W S N E
 
