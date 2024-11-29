@@ -7,11 +7,11 @@ q = deque(list(input()))
 # 0북 1동 2남 3서
 
 cur_dir = 0
+
 pos = [0,0]
 
-dy = [-1,0,1,0]
+dy = [1,0,-1,0]
 dx = [0,1,0,-1]
-
 
 while q:
     cur = q.popleft()
