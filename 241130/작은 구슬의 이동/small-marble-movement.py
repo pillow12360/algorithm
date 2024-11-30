@@ -31,4 +31,4 @@ for _ in range(t):
         r = n_r
         c = n_c
 
-print(f"{r} {c}")
+print(f"{c} {r}")
