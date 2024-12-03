@@ -1,13 +1,16 @@
-a = list(map(int, input().split()))
 
-is_answer = True
+n = 5
 
-for i in a:
-    if not i % 3 == 0:
-        is_answer = False
+answer = True
+
+for _ in range(n):
+    a = int(input())
+
+    if a % 3 != 0:
+        answer = False
         break
 
-if is_answer:
+if answer:
     print(1)
 else:
     print(0)
