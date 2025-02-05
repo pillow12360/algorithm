@@ -57,7 +57,6 @@ def LCA(root, p, q):
 # postorder와 원리가 비슷하다
 # left와 right를 방문한 다음에 할 일을 하기 때문
 
-
 def LCA(root, p, q):
     if root is None:
         return None
