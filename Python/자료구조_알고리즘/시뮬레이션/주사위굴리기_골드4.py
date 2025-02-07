@@ -22,7 +22,6 @@ def roll_dice(d):
     elif d == 4:  # 남쪽
         dice[0], dice[1], dice[2], dice[3] = dice[3], dice[2], dice[0], dice[1]
 
-
 for command in commands:
 
     nx, ny = x + dx[command - 1], y + dy[command - 1]
@@ -31,9 +30,6 @@ for command in commands:
         continue
 
     x, y = nx, ny
-
-    if not (0 <= x < N and 0 <= y < M):
-        continue
 
     roll_dice(command)
 
