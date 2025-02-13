@@ -15,13 +15,13 @@ let result = [];
 
 function hanoi(n, from, target, temp) {
   if (n === 1) {
-    result.push(`${from} ${target}`);
+    result.push(`${n}번 원판을 ${from}에서 ${target}로 이동`);
     return;
   }
   hanoi(n - 1, from, temp, target);
-  result.push(`${from} ${target}`);
+  result.push(`${n}번 원판을 ${from}에서 ${target}로 이동`);
   hanoi(n - 1, temp, target, from);
 }
 
-hanoi(num, 1, 3, 2);
+hanoi(num, 'A', 'C', 'B');
 console.log(result.join('\n'));
