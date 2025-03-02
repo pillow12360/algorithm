@@ -8,7 +8,7 @@ class DisjointSet {
   find(v) {
     if (v !== this.parents[v]) {
       this.parents[v] = this.find(this.parents[v]);
-    }
+    } // 경로 압축
     return this.parents[v];
   }
 
