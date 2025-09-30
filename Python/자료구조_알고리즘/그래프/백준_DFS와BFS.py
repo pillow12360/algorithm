@@ -56,6 +56,9 @@ def dfs(v):
       dfs_visited[cur_v] = True 
       dfs(cur_v)
 
+def dfs(v):
+  dfs_visited[v] = True
+
 dfs(V)
 print()
 bfs(V)
@@ -79,3 +82,11 @@ bfs(V)
 # 이번 문제의 출력 값은 중간에 저장할 데이터를 하나 씩 출력하는 형식으로 구현
 
 # 변수명을 일관성 있게 통일하여 코드의 난해함 수정 하기
+
+
+def dfs(v, graph, visited):
+  visited[v] = True
+
+  for i in range(N):
+    if graph[v][i] == 1 and not visited[i]:
+      dfs(i,graph, visited)
