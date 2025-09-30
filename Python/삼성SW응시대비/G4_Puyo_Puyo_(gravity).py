@@ -7,7 +7,8 @@ answer = 0
 def is_range(r,c):
   return 0<=r<12 and 0<=c<6
 
-# 발상의 전환 한 row만 선택하여 중력을 적용
+# 발상의 전환 한 row만 선택하여 중력을 적용 
+# 중요!!
 def gravity():
   for c in range(6):
     q = deque()
